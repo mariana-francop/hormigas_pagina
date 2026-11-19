@@ -49,7 +49,14 @@ img { max-width: 100%; display: block; }
   padding: 0.3rem 0.7rem; border-radius: 999px;
 }
 .menu a:not(.logo):hover { background: var(--cafe-700); }
-
+/* 3b. MENÚ RESPONSIVO: base (computadora) */
+html { scroll-padding-top: 4rem; } /* evita que el encabezado tape los títulos al navegar */
+.enlaces { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; }
+.hamburguesa {
+  display: none; background: none; border: 0; cursor: pointer;
+  color: var(--verde-100); font-size: 1.6rem; padding: 0.2rem 0.5rem;
+}
+.fondo-menu { display: none; }
 /* 4. PORTADA (inicio) */
 .portada {
   text-align: center; color: var(--cafe-100);
