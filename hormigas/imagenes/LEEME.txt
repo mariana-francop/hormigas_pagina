@@ -1,0 +1,12 @@
+Guarda aquí las imágenes con EXACTAMENTE estos nombres:
+
+anatomia-hormiga.jpg      castas-colonia.jpg
+cortadoras-hojas.jpg      hormiga-semilla.jpg
+interior-nido.jpg         hormiguero.jpg
+sin-jefe.jpg              larvas.jpg
+rastro-olor.jpg           hormiga-zombi.jpg
+esquema-aco.jpg           problema-viajante.jpg
+foto-propia.jpg           <-- tu foto
+
+Fuentes libres: Wikimedia Commons, Pixabay, Unsplash.
+Anota sitio, autor y enlace de cada una en la tabla de créditos del index.html.

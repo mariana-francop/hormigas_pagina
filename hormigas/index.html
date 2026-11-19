@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Codificación y adaptación a celular (viewport) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El mundo bajo tus pies | Las hormigas</title>
+  <!-- Iconos (Font Awesome, requiere internet) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Enlace a la hoja de estilos -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO + MENÚ DE NAVEGACIÓN =====
+       Cada enlace apunta (#) al id de una sección de esta misma página -->
+  <header class="encabezado">
+    <nav class="menu">
+      <a href="#inicio" class="logo"><i class="fa-solid fa-bug"></i> El mundo bajo tus pies</a>
+      <a href="#que-son">Qué son</a>
+      <a href="#colonia">Su colonia</a>
+      <a href="#comen-viven">Qué comen y dónde viven</a>
+      <a href="#curiosidades">Curiosidades</a>
+      <a href="#campo">Mi observación</a>
+      <a href="#creditos">Créditos</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== INICIO ===== -->
+    <section class="portada" id="inicio">
+      <h1>EL MUNDO BAJO TUS PIES</h1>
+      <p>
+        La colonia de hormigas funciona como un equipo de desarrollo: cada una tiene su rol y juntas
+        resuelven problemas complejos sin un líder central. Esta forma de organizarse inspiró la
+        inteligencia de enjambre (<em>Swarm Intelligence</em>), una rama de la inteligencia artificial.
+        Aquí exploramos su mundo y cómo la naturaleza inspira soluciones tecnológicas.
+      </p>
+      <a class="boton" href="#que-son">Empezar a explorar</a>
+    </section>
+
+    <!-- ===== SECCIÓN 1: QUÉ SON Y CÓMO SON ===== -->
+    <section class="seccion" id="que-son">
+      <div class="contenedor">
+        <h2>¿Qué son y cómo son?</h2>
+        <p>
+          Las hormigas son insectos pequeños y sociales de la familia <strong>Formicidae</strong> y del orden
+          de los himenópteros, parientes de las abejas y las avispas. Viven en colonias y habitan en todo
+          el mundo, excepto en las zonas polares.
+        </p>
+        <p>
+          Su cuerpo se divide en tres partes: <strong>cabeza, torso y abdomen</strong>, unidas por una cintura
+          muy fina. Tienen dos antenas en forma de codo, completamente articuladas, que usan para reconocer
+          su entorno y comunicarse. Poseen seis patas, y solo las reinas y los machos tienen alas, únicamente
+          durante la época de reproducción.
+        </p>
+        <p>
+          Su tamaño varía según la especie (desde unos 2 mm), pero a pesar de ser pequeñas son extremadamente fuertes.
+        </p>
+        <div class="galeria">
+          <figure>
+            <div class="marco" data-archivo="anatomia-hormiga.jpg">
+              <img src="imagenes/anatomia-hormiga.jpg" alt="Partes del cuerpo de una hormiga: cabeza, torso y abdomen" onerror="this.style.display='none'">
+            </div>
+            <figcaption>Cuerpo dividido en cabeza, torso y abdomen.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN 2: COLONIA Y ORGANIZACIÓN ===== -->
+    <section class="seccion" id="colonia">
+      <div class="contenedor">
+        <h2>Su colonia y cómo se organizan</h2>
+        <p>Una colonia suele dividirse en cuatro grupos:</p>
+        <div class="rejilla">
+          <div class="tarjeta">
+            <h4><i class="fa-solid fa-crown"></i> La reina</h4>
+            <p>La más grande de la colonia. Su única función es poner huevos para que la población crezca, y puede vivir varios años.</p>
+          </div>
+          <div class="tarjeta">
+            <h4><i class="fa-solid fa-screwdriver-wrench"></i> Las obreras</h4>
+            <p>Hembras estériles que forman la mayor parte de la colonia. Buscan comida, cuidan de las larvas, limpian y amplían el nido.</p>
+          </div>
+          <div class="tarjeta">
+            <h4><i class="fa-solid fa-shield-halved"></i> Las soldado</h4>
+            <p>Tienen la cabeza y la mandíbula más grandes. Defienden el hormiguero y transportan objetos pesados.</p>
+          </div>
+          <div class="tarjeta">
+            <h4><i class="fa-solid fa-feather"></i> Los machos</h4>
+            <p>Son alados y su único propósito es fecundar a la reina. Viven muy poco tiempo.</p>
+          </div>
+        </div>
+        <p>
+          No existe un líder central que dé órdenes. Todos los individuos cooperan mediante
+          <strong>reglas simples y comunicación</strong>, usando solo feromonas, tacto y vibraciones.
+        </p>
+        <div class="galeria">
+          <figure>
+            <div class="marco" data-archivo="castas-colonia.jpg">
+              <img src="imagenes/castas-colonia.jpg" alt="Reina, obrera, soldado y macho de una colonia de hormigas" onerror="this.style.display='none'">
+            </div>
+            <figcaption>Las castas de una colonia.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN 3: QUÉ COMEN Y DÓNDE VIVEN ===== -->
+    <section class="seccion" id="comen-viven">
+      <div class="contenedor">
+        <h2>¿Qué comen y dónde viven?</h2>
+
+        <h3>¿Qué comen?</h3>
+        <p>
+          La mayoría come de todo un poco y solo algunas se especializan: unas cazan otros animales, otras
+          prefieren semillas o el néctar de las flores, y otras recogen la melaza, un líquido dulce que
+          producen insectos como los pulgones. Las <strong>cortadoras de hojas</strong> no se comen las hojas:
+          las llevan al nido para alimentar un hongo que ellas mismas cultivan, y ese hongo es su comida principal.
+        </p>
+        <p>
+          No todas salen a buscar comida: solo entre el 10 y el 20 % de la colonia lo hace, y debe traer lo
+          que necesita todo el nido. Los adultos necesitan sobre todo azúcares para tener energía, mientras
+          que las larvas y la reina necesitan además proteínas para crecer y poner huevos.
+        </p>
+        <div class="galeria">
+          <figure>
+            <div class="marco" data-archivo="cortadoras-hojas.jpg">
+              <img src="imagenes/cortadoras-hojas.jpg" alt="Hormigas cortadoras de hojas cargando fragmentos de hoja" onerror="this.style.display='none'">
+            </div>
+            <figcaption>Hormigas cortadoras de hojas.</figcaption>
+          </figure>
+          <figure>
+            <div class="marco" data-archivo="hormiga-semilla.jpg">
+              <img src="imagenes/hormiga-semilla.jpg" alt="Hormiga cargando una semilla" onerror="this.style.display='none'">
+            </div>
+            <figcaption>Hormiga con una semilla.</figcaption>
+          </figure>
+        </div>
+
+        <h3>¿Dónde viven?</h3>
+        <p>
+          Viven en casi todos los ambientes de tierra firme, incluso en lugares que parecen difíciles.
+          Sus nidos están en el suelo y algunas construyen montículos. Como así modifican el terreno donde
+          viven, los científicos las llaman <strong>“ingenieras del ecosistema”</strong>.
+        </p>
+        <p>
+          Hay más hormigas en las zonas tropicales que en otras regiones. En los bosques abundan las que
+          viven entre las hojas caídas, y en las zonas áridas, las que buscan comida sobre el suelo.
+        </p>
+        <div class="galeria">
+          <figure>
+            <div class="marco" data-archivo="interior-nido.jpg">
+              <img src="imagenes/interior-nido.jpg" alt="Túneles y cámaras en el interior de un nido de hormigas" onerror="this.style.display='none'">
+            </div>
+            <figcaption>Interior del nido.</figcaption>
+          </figure>
+          <figure>
+            <div class="marco" data-archivo="hormiguero.jpg">
+              <img src="imagenes/hormiguero.jpg" alt="Hormiguero en forma de montículo sobre el suelo" onerror="this.style.display='none'">
+            </div>
+            <figcaption>Hormiguero.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN 4: CURIOSIDADES Y PROGRAMACIÓN ===== -->
+    <section class="seccion" id="curiosidades">
+      <div class="contenedor">
+        <h2>Curiosidades</h2>
+        <div class="rejilla">
+          <div class="tarjeta">
+            <h4>No hay un jefe que reparta la comida</h4>
+            <p>Las larvas avisan que tienen hambre a las obreras del nido, estas se lo transmiten a las que salen a buscar comida, y ellas salen por más.</p>
+          </div>
+          <div class="tarjeta">
+            <h4>Las larvas ayudan a digerir</h4>
+            <p>Los adultos solo pueden tragar partículas sólidas muy pequeñas, así que las larvas digieren la comida y se la regresan en forma líquida.</p>
+          </div>
+          <div class="tarjeta">
+            <h4>Se guían por el olor</h4>
+            <p>Al encontrar comida, una hormiga vuelve al nido dejando un rastro de olor que sus compañeras siguen y van reforzando.</p>
+          </div>
+          <div class="tarjeta">
+            <h4>Las “hormigas zombi”</h4>
+            <p>En una selva de Tailandia, las hormigas infectadas por un hongo bajan de las copas de los árboles y muerden la vena de una hoja antes de morir. El hongo crece por su cabeza y suelta esporas que pueden infectar a otras.</p>
+          </div>
+        </div>
+        <div class="galeria">
+          <figure>
+            <div class="marco" data-archivo="sin-jefe.jpg">
+              <img src="imagenes/sin-jefe.jpg" alt="Hormigas trabajando juntas sin un líder" onerror="this.style.display='none'">
+            </div>
+            <figcaption>No hay un jefe.</figcaption>
+          </figure>
+          <figure>
+            <div class="marco" data-archivo="larvas.jpg">
+              <img src="imagenes/larvas.jpg" alt="Larvas de hormiga cuidadas por obreras" onerror="this.style.display='none'">
+            </div>
+            <figcaption>Las larvas ayudan a digerir.</figcaption>
+          </figure>
+          <figure>
+            <div class="marco" data-archivo="rastro-olor.jpg">
+              <img src="imagenes/rastro-olor.jpg" alt="Fila de hormigas siguiendo un rastro de feromonas" onerror="this.style.display='none'">
+            </div>
+            <figcaption>Se guían por el olor.</figcaption>
+          </figure>
+          <figure>
+            <div class="marco" data-archivo="hormiga-zombi.jpg">
+              <img src="imagenes/hormiga-zombi.jpg" alt="Hormiga infectada por hongo aferrada a una hoja" onerror="this.style.display='none'">
+            </div>
+            <figcaption>Hormiga zombi.</figcaption>
+          </figure>
+        </div>
+
+        <h3>Las hormigas y la programación</h3>
+        <div class="destacado">
+          <p>
+            En 1996, <strong>Marco Dorigo, Vittorio Maniezzo y Alberto Colorni</strong> crearon un método para
+            computadoras inspirado en las colonias de hormigas. Se preguntaron cómo unos animales casi ciegos
+            logran encontrar el camino más corto entre su nido y la comida.
+          </p>
+          <p>
+            En su método usan “hormigas artificiales”: pequeños programas que prueban rutas. Así resolvieron
+            problemas como el <strong>problema del viajante</strong> (encontrar la ruta más corta para visitar
+            varias ciudades). Hoy esta idea se conoce como <strong>optimización por colonias de hormigas (ACO)</strong>.
+          </p>
+        </div>
+        <div class="galeria">
+          <figure>
+            <div class="marco" data-archivo="esquema-aco.jpg">
+              <img src="imagenes/esquema-aco.jpg" alt="Esquema de cómo la colonia elige el camino más corto" onerror="this.style.display='none'">
+            </div>
+            <figcaption>Cómo la colonia elige el camino más corto.</figcaption>
+          </figure>
+          <figure>
+            <div class="marco" data-archivo="problema-viajante.jpg">
+              <img src="imagenes/problema-viajante.jpg" alt="Rutas entre ciudades en el problema del viajante" onerror="this.style.display='none'">
+            </div>
+            <figcaption>Rutas entre ciudades (problema del viajante).</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OBSERVACIÓN PROPIA: FOTO + DATO DE CAMPO / ENTREVISTA =====
+              1) Guarda tu foto en la carpeta imagenes/ con el nombre foto-propia.jpg
+            (o cambia el nombre en el src de abajo).
+         2) Reemplaza los [corchetes] con tus datos reales. -->
+    <section class="seccion" id="campo">
+      <div class="contenedor">
+        <h2>Nuestra observación</h2>
+        <div class="campo">
+          <figure class="foto-propia">
+            <div class="marco" data-archivo="foto-propia.jpg (TU FOTO AQUÍ)">
+              <img src="imagenes/foto-propia.jpg" alt="Foto propia de hormigas tomada por el equipo" onerror="this.style.display='none'">
+            </div>
+            <figcaption>Un grupo de hormigas rojizas se arremolina alrededor de un hueco oscuro abierto entre la grava, entrando y saliendo del agujero mientras otras caminan sueltas sobre las piedritas grises y rosadas bajo el sol.</figcaption>
+          </figure>
+
+          <!-- Dato de campo: si prefieren entrevista, cambia el título y las respuestas -->
+          <div class="ficha">
+            <h3>Dato de campo</h3>
+            <dl>
+              <dt>¿Qué vimos?</dt><dd>Qué vimos?: Hallamos un hormiguero durante la caminata. Al acercarnos, pudimos observar detalladamente la conducta y la organización social de las hormigas en su entorno.</dd>
+              <dt>¿Dónde?</dt><dd> Instalaciones de la Universidad Tecnológica de Durango (UTD), específicamente en la zona posterior, en las inmediaciones de la cancha de fútbol.</dd>
+              <dt>¿A qué hora?</dt><dd> Aproximadamente a las 9:00 a. m. (durante un receso o hora libre).</dd>
+            
+              <dt>¿Qué hacían?</dt><dd> Entraban y salían constantemente del nido cargando distintos objetos y alimento; incluso observamos a una llevando una flor hacia el interior del hormiguero.</dd>
+            </dl>
+            <!-- Opción entrevista: nombre, ocupación (biólogo, jardinero...) y lo que respondió -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CRÉDITOS DE IMÁGENES =====
+         Completa una fila por imagen (fuentes libres: Wikimedia Commons, Pixabay, Unsplash) -->
+    <section class="seccion" id="creditos">
+      <div class="contenedor">
+        <h2>Créditos de imágenes</h2>
+        <div class="tabla-scroll">
+          <table>
+            <thead>
+              <tr><th>Archivo</th><th>Sitio</th><th>Autor</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>anatomia-hormiga.jpg</td><td>Ecología verde</td><td>Ecología verde</td></tr>
+              <tr><td>castas-colonia.jpg</td><td>wikipedia</td><td>GameKeeper</td></tr>
+              <tr><td>cortadoras-hojas.jpg</td><td>wikipedia</td><td>Kathy & sam from Beaverton OR, USA</td></tr>
+              <tr><td>hormiga-semilla.jpg</td><td>wikipedia</td><td>HERALDO DE ARAGÓN EDITORA, S.L. </td></tr>
+              <tr><td>interior-nido.jpg</td><td>wikipedia</td><td>Ibrahim Achiri</td></tr>
+              <tr><td>hormiguero.jpg</td><td>wikipedia</td><td>Dinesh Valke</td></tr>
+              <tr><td>sin-jefe.jpg</td><td>wikipedia</td><td>RCR del Ecuador</td></tr>
+              <tr><td>larvas.jpg</td><td>wikipedia</td><td>Nikita Alexandrov</td></tr>
+              <tr><td>rastro-olor.jpg</td><td>wikipedia</td><td>Mehmet Karatay.</td></tr>
+              <tr><td>hormiga-zombi.jpg</td><td>wikipedia</td><td>David P. Hughes y Maj-Britt Pontoppidan</td></tr>
+              <tr><td>esquema-aco.jpg</td><td>wikipedia</td><td>Johann Dréo (Nojhan).</td></tr>
+              <tr><td>problema-viajante.jpg</td><td>wikipedia</td><td>Johann Dréo (User:Nojhan)</td></tr>
+              <tr><td>foto-propia.jpg</td><td>Propia</td><td>Las Obreras</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer class="pie">
+    <p>El mundo bajo tus pies · Proyecto escolar sobre las hormigas · Las obreras </p>
+  </footer>
+
+</body>
+</html>

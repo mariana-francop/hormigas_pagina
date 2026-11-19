@@ -1,0 +1,138 @@
+/* ==========================================================
+   estilos.css - El mundo bajo tus pies
+   Paleta: verdes y cafés en varias tonalidades
+   ========================================================== */
+
+/* 1. VARIABLES DE COLOR (se cambian aquí y afectan a toda la página) */
+:root {
+  --verde-900: #1b4332;
+  --verde-700: #2d6a4f;
+  --verde-500: #40916c;
+  --verde-300: #74c69d;
+  --verde-100: #d8f3dc;
+  --cafe-900: #3e2723;
+  --cafe-700: #5d4037;
+  --cafe-500: #8d6e63;
+  --cafe-300: #bcaaa4;
+  --cafe-100: #efebe9;
+  --crema: #faf7f2;
+  --sombra: 0 4px 14px rgba(62, 39, 35, 0.18);
+}
+
+/* 2. RESET Y BASE: tipografía y fondo general */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  line-height: 1.7;
+  color: var(--cafe-900);
+  background: var(--crema);
+}
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+p { margin-bottom: 1rem; }
+a { color: var(--verde-700); }
+img { max-width: 100%; display: block; }
+
+/* 3. ENCABEZADO Y MENÚ DE NAVEGACIÓN */
+.encabezado {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--verde-900);
+  box-shadow: var(--sombra);
+}
+.menu {
+  max-width: 1100px; margin: 0 auto; padding: 0.6rem 1rem;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 1rem;
+}
+.logo { color: var(--verde-100); font-weight: bold; font-family: Georgia, serif; margin-right: auto; }
+.menu a:not(.logo) {
+  color: var(--cafe-100); text-decoration: none; font-size: 0.95rem;
+  padding: 0.3rem 0.7rem; border-radius: 999px;
+}
+.menu a:not(.logo):hover { background: var(--cafe-700); }
+
+/* 4. PORTADA (inicio) */
+.portada {
+  text-align: center; color: var(--cafe-100);
+  padding: 5rem 1rem;
+  background: linear-gradient(160deg, var(--verde-900), var(--verde-700) 55%, var(--cafe-700));
+}
+.portada h1 { font-size: clamp(2rem, 6vw, 3.6rem); letter-spacing: 1px; }
+.portada p { max-width: 700px; margin: 1rem auto 1.5rem; color: var(--verde-100); }
+.boton {
+  display: inline-block; padding: 0.7rem 1.6rem; border-radius: 999px;
+  background: var(--cafe-300); color: var(--cafe-900);
+  text-decoration: none; font-weight: bold;
+}
+.boton:hover { background: var(--verde-300); }
+
+/* 5. SECCIONES: contenedor centrado y colores alternados */
+.seccion { padding: 3.5rem 1rem; }
+.seccion:nth-of-type(even) { background: var(--verde-100); }
+.seccion:nth-of-type(odd) { background: var(--cafe-100); }
+.contenedor { max-width: 1000px; margin: 0 auto; }
+.seccion h2 {
+  font-size: 2rem; color: var(--verde-900); margin-bottom: 1.2rem;
+  padding-bottom: 0.4rem; border-bottom: 4px solid var(--cafe-500); display: inline-block;
+}
+.seccion h3 { color: var(--cafe-700); margin: 1.5rem 0 0.6rem; font-size: 1.35rem; }
+
+/* 6. TARJETAS (castas, curiosidades) */
+.rejilla { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 1rem 0; }
+.tarjeta {
+  background: #fff; border-left: 6px solid var(--verde-500);
+  border-radius: 8px; padding: 1rem 1.2rem; box-shadow: var(--sombra);
+}
+.tarjeta:nth-child(even) { border-left-color: var(--cafe-500); }
+.tarjeta h4 { color: var(--verde-700); margin-bottom: 0.4rem; }
+.tarjeta p { margin: 0; font-size: 0.95rem; }
+/* Iconos de las tarjetas y del logo */
+.tarjeta h4 i { margin-right: 0.4rem; color: var(--cafe-500); }
+.logo i { margin-right: 0.3rem; color: var(--verde-300); }
+
+/* 7. IMÁGENES: marco con fondo de relleno si falta el archivo */
+.galeria { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin: 1.5rem 0; }
+figure {
+  background: #fff; border-radius: 10px; overflow: hidden;
+  box-shadow: var(--sombra); border: 1px solid var(--cafe-300);
+}
+.marco {
+  min-height: 200px; position: relative; display: flex;
+  align-items: center; justify-content: center; text-align: center;
+  background: repeating-linear-gradient(45deg, var(--cafe-100), var(--cafe-100) 10px, var(--verde-100) 10px, var(--verde-100) 20px);
+  color: var(--cafe-700); font-size: 0.85rem; padding: 0.5rem;
+}
+.marco::before { content: "Falta imagen: " attr(data-archivo); position: absolute; }
+.marco img { position: relative; width: 100%; height: 100%; object-fit: cover; max-height: 320px; }
+figcaption { padding: 0.6rem 0.9rem; font-size: 0.9rem; color: var(--cafe-700); }
+
+/* 8. FOTO PROPIA Y DATO DE CAMPO */
+.campo { display: grid; gap: 1.5rem; grid-template-columns: 1fr 1fr; align-items: start; }
+.foto-propia .marco { border: 3px dashed var(--verde-700); min-height: 280px; }
+.ficha { background: #fff; border-radius: 10px; padding: 1.2rem; box-shadow: var(--sombra); border-top: 6px solid var(--cafe-500); }
+.ficha dt { font-weight: bold; color: var(--verde-700); margin-top: 0.6rem; }
+.ficha dd { margin-left: 0; color: var(--cafe-700); }
+
+/* 9. CITA DESTACADA (dato de programación) */
+.destacado {
+  background: var(--verde-900); color: var(--verde-100);
+  padding: 1.4rem 1.6rem; border-radius: 10px; border-left: 8px solid var(--cafe-300);
+}
+.destacado strong { color: var(--cafe-300); }
+
+/* 10. TABLA DE CRÉDITOS */
+.tabla-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #fff; font-size: 0.85rem; }
+th { background: var(--cafe-700); color: var(--cafe-100); text-align: left; }
+th, td { padding: 0.5rem 0.7rem; border: 1px solid var(--cafe-300); }
+tr:nth-child(even) td { background: var(--cafe-100); }
+
+/* 11. PIE DE PÁGINA */
+.pie { background: var(--cafe-900); color: var(--cafe-300); text-align: center; padding: 1.5rem 1rem; font-size: 0.9rem; }
+
+/* 12. ADAPTACIÓN A CELULAR (pantallas de hasta 700px) */
+@media (max-width: 700px) {
+  .campo { grid-template-columns: 1fr; }
+  .portada { padding: 3rem 1rem; }
+  .seccion { padding: 2.5rem 1rem; }
+  .logo { width: 100%; }
+}
