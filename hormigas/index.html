@@ -13,16 +13,29 @@
 <body>
 
   <!-- ===== ENCABEZADO + MENÚ DE NAVEGACIÓN =====
-       Cada enlace apunta (#) al id de una sección de esta misma página -->
+       En computadora: enlaces en fila.
+       En celular: botón hamburguesa que abre un panel lateral izquierdo. -->
   <header class="encabezado">
     <nav class="menu">
       <a href="#inicio" class="logo"><i class="fa-solid fa-bug"></i> El mundo bajo tus pies</a>
-      <a href="#que-son">Qué son</a>
-      <a href="#colonia">Su colonia</a>
-      <a href="#comen-viven">Qué comen y dónde viven</a>
-      <a href="#curiosidades">Curiosidades</a>
-      <a href="#campo">Mi observación</a>
-      <a href="#creditos">Créditos</a>
+
+      <!-- Botón hamburguesa (solo visible en celular) -->
+      <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="panel-menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Enlaces: en celular se convierten en el panel lateral -->
+      <div class="enlaces" id="panel-menu">
+        <a href="#que-son">Qué son</a>
+        <a href="#colonia">Su colonia</a>
+        <a href="#comen-viven">Qué comen y dónde viven</a>
+        <a href="#curiosidades">Curiosidades</a>
+        <a href="#campo">Mi observación</a>
+        <a href="#creditos">Créditos</a>
+      </div>
+
+      <!-- Fondo oscuro detrás del panel (clic para cerrar) -->
+      <div class="fondo-menu" id="fondo-menu"></div>
     </nav>
   </header>
 
@@ -245,10 +258,7 @@
       </div>
     </section>
 
-    <!-- ===== OBSERVACIÓN PROPIA: FOTO + DATO DE CAMPO / ENTREVISTA =====
-              1) Guarda tu foto en la carpeta imagenes/ con el nombre foto-propia.jpg
-            (o cambia el nombre en el src de abajo).
-         2) Reemplaza los [corchetes] con tus datos reales. -->
+    <!-- ===== OBSERVACIÓN PROPIA: FOTO + DATO DE CAMPO / ENTREVISTA ===== -->
     <section class="seccion" id="campo">
       <div class="contenedor">
         <h2>Nuestra observación</h2>
@@ -267,17 +277,15 @@
               <dt>¿Qué vimos?</dt><dd>Qué vimos?: Hallamos un hormiguero durante la caminata. Al acercarnos, pudimos observar detalladamente la conducta y la organización social de las hormigas en su entorno.</dd>
               <dt>¿Dónde?</dt><dd> Instalaciones de la Universidad Tecnológica de Durango (UTD), específicamente en la zona posterior, en las inmediaciones de la cancha de fútbol.</dd>
               <dt>¿A qué hora?</dt><dd> Aproximadamente a las 9:00 a. m. (durante un receso o hora libre).</dd>
-            
+
               <dt>¿Qué hacían?</dt><dd> Entraban y salían constantemente del nido cargando distintos objetos y alimento; incluso observamos a una llevando una flor hacia el interior del hormiguero.</dd>
             </dl>
-            <!-- Opción entrevista: nombre, ocupación (biólogo, jardinero...) y lo que respondió -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== CRÉDITOS DE IMÁGENES =====
-         Completa una fila por imagen (fuentes libres: Wikimedia Commons, Pixabay, Unsplash) -->
+    <!-- ===== CRÉDITOS DE IMÁGENES ===== -->
     <section class="seccion" id="creditos">
       <div class="contenedor">
         <h2>Créditos de imágenes</h2>
@@ -312,6 +320,29 @@
   <footer class="pie">
     <p>El mundo bajo tus pies · Proyecto escolar sobre las hormigas · Las obreras </p>
   </footer>
+
+  <!-- ===== SCRIPT DEL MENÚ LATERAL (celular) =====
+       Abre/cierra el panel agregando o quitando las clases "abierto" y "visible" -->
+  <script>
+    const btnMenu = document.getElementById('btn-menu');
+    const panelMenu = document.getElementById('panel-menu');
+    const fondoMenu = document.getElementById('fondo-menu');
+
+    function alternarMenu(abrir) {
+      panelMenu.classList.toggle('abierto', abrir);
+      fondoMenu.classList.toggle('visible', abrir);
+      btnMenu.setAttribute('aria-expanded', abrir);
+    }
+
+    // Clic en la hamburguesa: abre o cierra
+    btnMenu.addEventListener('click', () => alternarMenu(!panelMenu.classList.contains('abierto')));
+    // Clic en el fondo oscuro: cierra
+    fondoMenu.addEventListener('click', () => alternarMenu(false));
+    // Clic en cualquier enlace del panel: cierra
+    panelMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => alternarMenu(false)));
+    // Tecla Escape: cierra
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') alternarMenu(false); });
+  </script>
 
 </body>
 </html>
