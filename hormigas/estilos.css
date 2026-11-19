@@ -141,5 +141,28 @@ tr:nth-child(even) td { background: var(--cafe-100); }
   .campo { grid-template-columns: 1fr; }
   .portada { padding: 3rem 1rem; }
   .seccion { padding: 2.5rem 1rem; }
-  .logo { width: 100%; }
+
+  /* Se muestra la hamburguesa */
+  .hamburguesa { display: block; }
+
+  /* Los enlaces pasan a ser un panel fijo a la izquierda, escondido fuera de pantalla */
+  .enlaces {
+    position: fixed; top: 0; left: 0; z-index: 30;
+    width: 75%; max-width: 300px; height: 100%;
+    flex-direction: column; flex-wrap: nowrap; gap: 0.2rem;
+    padding: 4rem 1rem 1rem; overflow-y: auto;
+    background: var(--verde-900); box-shadow: var(--sombra);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  .enlaces.abierto { transform: translateX(0); }
+  .menu .enlaces a { display: block; padding: 0.8rem 1rem; border-radius: 8px; font-size: 1rem; }
+
+  /* Fondo oscuro detrás del panel */
+  .fondo-menu {
+    display: block; position: fixed; inset: 0; z-index: 20;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+  }
+  .fondo-menu.visible { opacity: 1; pointer-events: auto; }
 }
